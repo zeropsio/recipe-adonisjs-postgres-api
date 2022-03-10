@@ -1,0 +1,10 @@
+api:
+  build:
+    base: [ nodejs@14 ]
+    build:
+      - npm i
+      - npm run build
+    deploy: [ './build/~', 'node_modules' ]
+    cache: [ 'node_modules' ]
+  run:
+    start: npm start
